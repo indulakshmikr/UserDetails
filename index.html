@@ -14,7 +14,7 @@
     <!-- <header> -->
     <div id="header-container">
     </div>
-
+<hr style="width: 100%;">
     <div class="content-container">
         <div id="sidebar-container">
             <!-- Use JavaScript to load the header -->
@@ -30,34 +30,66 @@
                     </div>
                     <div class="content-filters">
                         <!-- <div> -->
-                        <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                            data-target="role-menu">
-                            <span>
-                                Role <i class="fas fa-chevron-down"></i>
-                            </span>
-                        </button>
-                        <ul class="dropdown-menu" id="role-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                        <!-- </div> -->
-
-                        <button>
-                            <h2>Status</h2>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <button>
-                            <h2>Publisher</h2>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-
+                            <div>
+                                <button class="btn" id="role-button" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                data-target="role-menu">
+                                <span>Role <i class="fas fa-chevron-down icon" id="role-icon"></i></span>
+                            </button>
+                            <ul class="dropdown-menu" id="role-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                            </div>
+                            <div>
+                                <button class="btn" id="status-button" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                data-target="status-menu">
+                                   <span>Status <i class="fas fa-chevron-down" id="status-icon"></i></span>
+                                </button>
+                                <div id="status-menu" class="dropdown-menu">
+                                    <div id="dropdownContent" class="multiselect">
+                                        <label class="checkbox" for="active">
+                                            <input type="checkbox" class="larger-checkbox"  value="active"><span class="badge rounded-pill badge-active">Active</span>
+                                        </label>
+                                        <label class="checkbox" for="not-verified">
+                                            <input type="checkbox" class="larger-checkbox" value="not-verified"><span class="badge rounded-pill not-verified">Not Verified</span></option>
+                                        </label>
+                                        <label class="checkbox" for="suspended">
+                                            <input type="checkbox" class="larger-checkbox"  value="suspended">
+                                            <span class="badge rounded-pill suspended">Suspended</span>
+                                        </label>
+                                        <label for="checkbox" for="blocked">
+                                            <input type="checkbox" class="larger-checkbox"  value="blocked">
+                                            <span class="badge rounded-pill blocked">Blocked</span>
+                                        </label>
+                                        <label for="checkbox" for="deleted">
+                                            <input type="checkbox" class="larger-checkbox"  value="deleted">
+                                            <span class="badge rounded-pill deleted">Deleted</span>
+                                        </label>
+                                        <label for="checkbox" for="deactivated">
+                                            <input type="checkbox" class="larger-checkbox"  value="deactivated">
+                                            <span class="badge rounded-pill deactivated">Deactivated</span>
+                                        </label>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div>
+                                <button class="btn" id="publisher-button" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                data-target="publisher-menu" onclick="changeIcon(event)">
+                                    Publisher <i class="icon fas fa-chevron-down" id="publisher-icon" onclick="changeIcon(event)"></i></span>
+                                </button>
+                                <ul class="dropdown-menu" id="publisher-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
                     </div>
                 </div>
 
                 <div class="content-row-1-right">
-                    <button btn type="submit" class="invite-btn"><i class="fas fa-plus"></i>
-                        <span>Invite Users</span></button>
+                    <button btn type="submit" class="invite-btn">
+                        &plus; Invite User</button>
                 </div>
             </div>
             <div class="content-row-2">
@@ -69,8 +101,8 @@
                     <span class="badge rounded-pill filter">Suspended &#10006;</span>
                     <span class="badge rounded-pill filter">Blocked &#10006;</span>
                 </div>
-                <div class="clear-btn">
-                    <button btn type="submit" class=" clear-btn">
+                <div>
+                    <button btn type="submit" class="clear-btn">
                         Clear All Filters
                     </button>
                 </div>
@@ -80,12 +112,12 @@
                 <table class="styled-table">
                     <thead>
                         <tr>
-                            <td></td>
-                            <td style="width:300px">Name</td>
-                            <td style="width:150px">Role</td>
-                            <td style="width:150px">Status</td>
-                            <td style="width:200px">Publisher</td>
-                            <td style="width:200px">Last Log In</td>
+                            <th></th>
+                            <th style="width:300px">Name</th>
+                            <th style="width:150px">Role</th>
+                            <th style="width:150px">Status</th>
+                            <th style="width:200px">Publisher</th>
+                            <th style="width:200px">Last Log In</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -94,7 +126,7 @@
                                 <div class="user-image">JB</div>
                             </td>
                             <td><span>
-                                    <h4>Joy Blair</h4>
+                                    <h6>Joy Blair</h6>
                                 </span>joy.blair@gmail.com<span></span></td>
                             <td>Writer</td>
                             <td><span class="badge rounded-pill badge-active">Active</span></td>
@@ -110,7 +142,7 @@
                                 <div class="user-image">JM</div>
                             </td>
                             <td><span>
-                                    <h4>John Malcovich</h4>
+                                    <h6>John Malcovich</h6>
                                 </span><span>john.malcovich@gmail.com</span></td>
                             <td>Member</td>
                             <td><span class="badge rounded-pill not-verified">Not Verified</span></td>
@@ -123,8 +155,8 @@
                                     <a href="userDetails.html">JB</a> </div>
                             </td>
                             <td><span>
-                                    <h4>
-                                        James Brown</h4>
+                                    <h6>
+                                        James Brown</h6>
                                 </span><span>james.brown@gmail.com</span></td>
                             <td>Writer</td>
                             <td><span class="badge rounded-pill badge-active">Active</span></td>
@@ -136,7 +168,7 @@
                                 <div class="user-image">LC</div>
                             </td>
                             <td><span>
-                                    <h4>Larry Cadwell</h4>
+                                    <h6>Larry Cadwell</h6>
                                 </span><span>larry.cadwell@gmail.com</span></td>
                             <td>Member</td>
                             <td><span class="badge rounded-pill not-verified">Not Verified</span></td>
@@ -148,7 +180,7 @@
                                 <div class="user-image">VV</div>
                             </td>
                             <td><span>
-                                    <h4>Velocity Vagabond</h4>
+                                    <h6>Velocity Vagabond</h6>
                                 </span><span>velocity.vagabond@gmail.com</span></td>
                             <td>Member</td>
                             <td><span class="badge rounded-pill not-verified">Not Verified</span></td>
@@ -160,7 +192,7 @@
                                 <div class="user-image">JT</div>
                             </td>
                             <td><span>
-                                    <h4>John Turner</h4>
+                                    <h6>John Turner</h6>
                                 </span>jon.turner@gmail.com<span></span></td>
                             <td>Writer</td>
                             <td><span class="badge rounded-pill suspended">Suspended</span></td>
@@ -172,7 +204,7 @@
                                 <div class="user-image">JM</div>
                             </td>
                             <td><span>
-                                    <h4>John Malcovich</h4>
+                                    <h6>John Malcovich</h6>
                                 </span><span>john.malcovich@gmail.com</span></td>
                             <td>Member</td>
                             <td><span class="badge rounded-pill badge-active">Active</span></td>
@@ -194,7 +226,7 @@
                                 <div class="user-image">CW</div>
                             </td>
                             <td><span>
-                                    <h4>Caroline Willgard</h4>
+                                    <h6>Caroline Willgard</h6>
                                 </span><span>caroline.will@gmail.com</span></td>
                             <td>Writer</td>
                             <td><span class="badge rounded-pill deactivated">Deactivated</span></td>

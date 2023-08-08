@@ -34,12 +34,11 @@ function showTabContent(tabIndex) {
   tabs[tabIndex].classList.add("active");
 }
 
+function changeIcon(event){
+  const button = document.getElementById(`${event.target.id}`);
+  button.addEventListener("click", function () {
+    button.classList.toggle("clicked");
+  });
+}
 
-// // Toggle chevron icons on accordion toggle
-// $('.accordion').on('hidden.bs.collapse', function (e) {
-//   $(e.target).prev('.card-header').find('.toggle-icon').removeClass('fa-chevron-up').addClass('fa-chevron-down');
-// });
 
-// $('.accordion').on('shown.bs.collapse', function (e) {
-//   $(e.target).prev('.card-header').find('.toggle-icon').removeClass('fa-chevron-down').addClass('fa-chevron-up');
-// });
