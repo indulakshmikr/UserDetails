@@ -5,7 +5,7 @@
 # How to Run the project
 📌 You can enable the live server in VS code which will open index.html which contains all user table
 
-🧭 Also navigation is available on clicking to JB ( 3rd row in table ) which takes to the User Details page and to go back to user list click on leftarrow on Breadcrumb
+🧭 Also navigation is available on clicking to user image placeholder **JB**  ( 3rd row in table ) which takes to the User Details page and to go back to user list click on leftarrow on Breadcrumb
 
 # Live Project
 
