@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Users</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <div id="header-container">
+    </div>
+    <hr>
+    <div class="content-container">
+        <div id="sidebar-container">
+        </div>
+        <div class="content">
+
+            <div class="breadcrumb">
+                <span class="breadcrumb-arrow">
+                    <a href="index.html" class="d-flex align-items-center">
+                        <i class="fas fa-arrow-left mr-2 ml-2"></i>
+                    </a>
+                </span>
+                <span class="breadcrumb-item">Users</span>
+                <span class="breadcrumb-slash">/</span>
+                <span class="breadcrumb-item active">James Brown</span>
+            </div>
+
+            <div class="user-content">
+                <div class="user-content-l">
+                    <div class="tab-container">
+                        <div class="tab active" onclick="showTabContent(0)">Details</div>
+                        <div class="tab" onclick="showTabContent(1)">Manage Account</div>
+                    </div>
+
+                    <div class="tab-content" id="tab-content-0">
+                        <div>
+                            <h4>Nickname</h4>
+                            <p>@jamesbrown</p>
+                        </div>
+                        <hr>
+                        <div>
+                            <h4>About User</h4>
+                            <p>Managing partner ar Remagine Ventures. Founder of TechBikers, Campus London and VC Cafe,
+                                proud Xoogier</p>
+                        </div>
+                        <hr>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Tbilisi, Georgia</p>
+                        </div>
+                        <hr>
+                        <div>
+                            <h4>Writing Topics:</h4>
+                            <div class="topics">
+                                <span class="badge rounded-pill topic">Culture</span>
+                                <span class="badge rounded-pill topic">Tech</span>
+                                <span class="badge rounded-pill topic">Health</span>
+                                <span class="badge rounded-pill topic">Elections in Georgia</span>
+                                <span class="badge rounded-pill topic">Science</span>
+                                <span class="badge rounded-pill topic">Politics</span>
+                                <span class="badge rounded-pill topic">Science</span>
+                                <span class="badge rounded-pill topic">World</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="tab-content-1" style="display: none;">
+                        
+                    </div>
+                </div>
+                <div class="user-content-r">
+                    <div class="user-image">JB</div>
+                    <div>
+                        <div><h2>James Brown</h2><span class="badge rounded-pill badge-active">Active</span></div>
+                        <small>@jamesbrown</small>
+                    </div>
+                    <div class="publications">
+                        <span>12 Personal Publications</span>
+                        <span>53 Publisher Publications</span>
+                    </div>
+                    <div class="user-type">
+                        <h5>User Type</h5>
+                        <div class="svg-container">
+                            <img src="./assets/icons-bulb.png" alt="icons-bulb">
+                        </div>
+                    </div>
+                    <div class="publisher">
+                        <h5>Publisher</h5>
+                        <div class="publisher-details rounded-pill">
+                            <div class="publisher-img">
+                                FN
+                            </div>
+                            <div>
+                                <h5>Formula News</h5>
+                                <span>@formulanews.ge</span>
+                            </div>
+                            <span></span>
+                        </div>
+                        
+                    </div>
+                    <div>
+                        <h5>Email</h5>
+                        <span>jamesbrown@gmail.com</span>
+
+                    </div>
+
+                    <div>
+                        <h5>Registration</h5>
+                        <span>02.07.2022</span>
+                    </div>
+                    <div>
+                        <h5>Last Activity</h5>
+                        <span>
+                            12.09.2022, 15.37
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</html>
